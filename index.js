@@ -179,51 +179,6 @@ client.on('message', message => {
   }
   //Link Main
   if(command === 'h!main'){
-    if (message.member.roles.cache.has('803868750192967720')) {
-      client.commands.get('main').execute(message, args);
-    }else{
-        return message.reply("Indonesia : Untuk menghindari spam commands dibatasi \n  English : to avoid spam utility is restricted")
-    }
-  }
-  //Link Main
-  if(command === 'h!react'){
-    if (message.member.roles.cache.has('803868750192967720')) {
-      client.commands.get('reaction').execute(message, args, Discord, client);
-    }else{
-        return message.reply("Indonesia : Untuk menghindari spam commands dibatasi \n  English : to avoid spam utility is restricted")
-    }
-  }
-  //Rules
-  if(command === 'h!rules'){
-    const embed = new Discord.MessageEmbed()
-      .setColor("RED")
-      .setTitle("RULES DISCORD SERVER")
-      .setDescription("**Indonesia** : Jika kalian ingin berbagi file silahkan berbagi pada channel **#berbagi**, dan tolong bersabar untuk kedepannya admin akan memperbanyak kegunaan bot beserta comicnya akan diperbanyak jadi kalian tinggal tunggu kelanjutan dari adminnya ~enjoy \n **English** : If you want to share files, please share them on the **#berbagi** channel, and please be patient the admin will increase the use of the bot and the comics will be reproduced, so you just have to wait for the next update from the admin ~enjoy \n**Disclaimer** : Comic bukanlan buatan admin || Comic is not made by admin")
-    message.channel.send(embed)
+    client.commands.get('main').execute(message, args);
   }
 })
-
-//user Join
-client.on('guildMemberAdd', guildMember => {
-  let WelcomeRole = guildMember.guild.roles.cache.find(role => role.name === 'Unverify');
-  guildMember.roles.add(WelcomeRole)
-  let embedwelcome = new Discord.MessageEmbed()
-    .setColor(0x00FF2E)
-    .setTitle(`Welcome Message`)
-    .setDescription(`**=================================** \n` 
-      +`Welcome  <@${guildMember.user.id}> to SecretDiscordServer \n`
-      +`ID : Silahkan lakukan verify terlebih dahulu click ☑️ pada chanel Verify user\n` 
-      +`EN : Please verify first, click ☑️ on the Verify user channel`)
-      .setFooter(`By : HentaiBot#2501`);
-    guildMember.guild.channels.cache.get('803914842456719412').send(embedwelcome)
-})
-client.on('guildMemberRemove', guildMember => {
-  let embedwelcome = new Discord.MessageEmbed()
-    .setColor(0x00FF2E)
-    .setTitle(`GoodBye Message`)
-    .setDescription(`**=================================** \n` 
-      +`Goodbye  <@${guildMember.user.id}> from SecretDiscordServer \n`)
-      .setFooter(`By : HentaiBot#2501`);
-    guildMember.guild.channels.cache.get('803914842456719412').send(embedwelcome)
-})
-require('./server')();
