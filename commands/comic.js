@@ -13,7 +13,9 @@ module.exports = {
         .addField("=====\nMom Saves Sub", '**=====**')
         .addField("Mom Saves Part 1", "http://bit.ly/MomSavePart1")
         .addField("Mom Saves Part 2", "http://bit.ly/MomSavePart2")
-
+        .addField("Mom Saves Part 3", "http://bit.ly/MomSavePart3")
+        .addField("Mom Saves Part 4", "http://bit.ly/MomSavePart4")
+        .addField("Mom Saves Part 5", "http://bit.ly/MomSavePart5")
         .addField("=====\nMom Needs Sub", '**=====**')
         .addField("Mom Needs Part 1", "http://bit.ly/MotherNeedsPart1")
         .addField("Mom Needs Part 2", "http://bit.ly/MotherNeedsPart2")

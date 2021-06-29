@@ -1,10 +1,12 @@
 const Discord = require("discord.js");
+const { HentaiHavenAPI } = require('hentaihaven');
+
+
+
 module.exports = {
-    name: 'help',
+    name: 'hentaihaven',
     description: "Sets up a reaction role message!",
     async execute(message) {
-      
-      const image = await nsfw.erokemo();
- 
-    }
-}
+    message.reply('sorry this commands still on fix')
+
+    }}

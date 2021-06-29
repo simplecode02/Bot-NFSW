@@ -1,17 +1,16 @@
 const Discord = require("discord.js");
-const NSFW = require("discord-nsfw");
-const nsfw = new NSFW();
+const RandomHub = require('random-hub').RandomHub;
+const hub = new RandomHub();
 
 module.exports = {
-    name: 'hentaithighh',
+    name: 'random',
     description: "Sets up a reaction role message!",
     async execute(message) {
       
-      const image = await nsfw.hentaithigh();
       const embed = new Discord.MessageEmbed()
-      .setTitle(`HentaiThigh Image`)
+      .setTitle(`random Image`)
       .setColor("RANDOM")
-      .setImage(image);
+      .setImage(hub.getRandomHub());
       message.channel.send(embed);
     }
 }

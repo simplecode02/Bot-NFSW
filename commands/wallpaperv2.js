@@ -5,7 +5,7 @@ const Discord = require("discord.js");
 module.exports = {
     name: 'wallpaperv2',
     description: "Sets up a reaction role message!",
-    async execute(message, args) {
+    async execute(message, args, client, Discord) {
 
         message.reply(`after 2 minutes picture will be permanent`)
         let random = Math.floor(Math.random() * 107)
